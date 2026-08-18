@@ -1,49 +1,220 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>얼죽빙 고객지원</title>
-<style>
-  :root { color-scheme: light dark; }
-  body { font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Segoe UI", Roboto, sans-serif;
-         max-width: 640px; margin: 0 auto; padding: 32px 20px 64px; line-height: 1.7;
-         color: #1c2b3a; background: #f4faff; }
-  @media (prefers-color-scheme: dark) { body { color: #e7eef5; background: #101418; } a { color: #6fb8ff; } }
-  h1 { font-size: 1.6rem; margin-bottom: 4px; }
-  .sub { color: #6b7c8d; margin-top: 0; }
-  h2 { font-size: 1.15rem; margin-top: 32px; }
-  .card { background: rgba(140,200,255,.10); border-radius: 14px; padding: 16px 18px; margin-top: 12px; }
-  a.mail { font-weight: 600; }
-  footer { margin-top: 48px; font-size: .85rem; color: #8a99a8; }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>고객지원 — 얼죽빙 (Support — Eoljukbing)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #ffffff;
+      --fg: #1c1c1e;
+      --muted: #6b6b70;
+      --border: #e2e2e6;
+      --accent: #2a6df4;
+      --card: #f7f7f9;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121214;
+        --fg: #ececee;
+        --muted: #9a9aa0;
+        --border: #2c2c30;
+        --accent: #6ea0ff;
+        --card: #1c1c20;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo",
+        "Malgun Gothic", "Noto Sans KR", Roboto, sans-serif;
+      line-height: 1.7;
+      font-size: 17px;
+      word-break: keep-all;
+    }
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 20px;
+      margin-bottom: 28px;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      margin: 0 0 8px;
+      letter-spacing: -0.01em;
+    }
+    .updated {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0;
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      margin: 36px 0 12px;
+      letter-spacing: -0.01em;
+    }
+    h3 {
+      font-size: 17px;
+      font-weight: 600;
+      margin: 24px 0 6px;
+    }
+    p { margin: 0 0 16px; }
+    ul {
+      margin: 0 0 16px;
+      padding-left: 22px;
+    }
+    li { margin-bottom: 8px; }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      word-break: break-all;
+    }
+    a:hover { text-decoration: underline; }
+    .contact {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin-bottom: 16px;
+    }
+    .contact strong { display: block; margin-bottom: 4px; }
+    .contact .email {
+      font-size: 19px;
+      font-weight: 600;
+    }
+    .en {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin-top: 40px;
+    }
+    .en h2 { margin-top: 0; }
+    footer {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+    }
+  </style>
 </head>
 <body>
-  <h1>🧊 얼죽빙 고객지원</h1>
-  <p class="sub">얼어 죽어도 빙수 — 직접 갈고 올리는 빙수 만들기</p>
+  <div class="wrap">
+    <header>
+      <h1>얼죽빙 고객지원</h1>
+      <p class="updated">최종 업데이트: 2026-08-15</p>
+    </header>
 
-  <div class="card">
-    <p>문의·건의·버그 제보는 아래 이메일로 보내주세요. 확인 후 답변드립니다.</p>
-    <p>📮 <a class="mail" href="mailto:[PLACEHOLDER 실제 이메일]">[PLACEHOLDER 실제 이메일]</a></p>
+    <p>
+      얼죽빙을 이용해 주셔서 감사합니다. 앱 사용 중 궁금한 점이나 문제가 있으면
+      아래 이메일로 언제든 문의해 주세요. 버그 제보와 기능 제안도 환영합니다.
+    </p>
+
+    <h2>문의하기</h2>
+    <div class="contact">
+      <strong>이메일 (Email)</strong>
+      <span class="email"><a href="mailto:sijinyudev@gmail.com">sijinyudev@gmail.com</a></span>
+    </div>
+    <p>
+      영업일 기준 <strong>2일 이내</strong>에 답변드립니다. 문제 상황을 빠르게 파악할 수 있도록
+      아래 내용을 함께 보내주시면 큰 도움이 됩니다.
+    </p>
+    <ul>
+      <li>사용 중인 기기 모델 (예: iPhone 17 Pro)</li>
+      <li>iOS 버전 (설정 &gt; 일반 &gt; 정보)</li>
+      <li>얼죽빙 앱 버전</li>
+      <li>문제가 발생한 화면의 스크린샷 또는 화면 녹화</li>
+    </ul>
+
+    <h2>자주 묻는 질문</h2>
+
+    <h3>앱을 쓰려면 회원가입이 필요한가요?</h3>
+    <p>
+      아니요. 얼죽빙은 회원가입이나 로그인 없이 바로 사용할 수 있습니다.
+      이름, 이메일, 전화번호 같은 개인정보를 수집하지 않습니다.
+    </p>
+
+    <h3>제가 만든 데이터는 어디에 저장되나요?</h3>
+    <p>
+      앱 안에서 만든 데이터는 모두 기기 내부에만 저장되며 외부 서버로 전송되지 않습니다.
+      따라서 앱을 삭제하면 데이터도 함께 삭제되니 주의해 주세요.
+    </p>
+
+    <h3>앱을 삭제했는데 데이터를 되살릴 수 있나요?</h3>
+    <p>
+      데이터가 기기에만 저장되는 구조라 앱 삭제 후에는 복구할 수 없습니다.
+      서버 백업본을 보관하지 않기 때문입니다.
+    </p>
+
+    <h3>추적 권한 요청은 왜 뜨나요? 거부해도 되나요?</h3>
+    <p>
+      얼죽빙은 Google AdMob 광고를 노출하며, 맞춤형 광고 제공을 위해 iOS의
+      App Tracking Transparency(ATT) 권한을 요청합니다.
+      <strong>거부하셔도 앱의 모든 기능을 그대로 사용할 수 있습니다.</strong>
+      거부하면 맞춤형 광고 대신 비개인화 광고가 표시됩니다.
+    </p>
+    <p>
+      권한 선택은 언제든 <em>설정 &gt; 개인정보 보호 및 보안 &gt; 추적</em>에서 변경할 수 있습니다.
+    </p>
+
+    <h3>광고를 없앨 수 있나요?</h3>
+    <p>
+      현재 버전에는 광고 제거 옵션이 없습니다. 광고 없는 버전을 원하신다면
+      위 이메일로 의견을 보내주세요. 향후 업데이트에 반영을 검토하겠습니다.
+    </p>
+
+    <h3>앱이 실행되지 않거나 강제 종료돼요.</h3>
+    <p>다음 순서로 시도해 보세요.</p>
+    <ul>
+      <li>앱을 완전히 종료한 뒤 다시 실행</li>
+      <li>기기 재시작</li>
+      <li>App Store에서 최신 버전으로 업데이트</li>
+      <li>그래도 해결되지 않으면 기기 모델과 iOS 버전을 적어 이메일로 문의</li>
+    </ul>
+
+    <h2>개인정보처리방침</h2>
+    <p>
+      <a href="https://sijinyu.github.io/eoljukbing-privacy/">개인정보처리방침 전문 보기</a>
+    </p>
+
+    <div class="en">
+      <h2>Support (English)</h2>
+      <p>
+        Thank you for using <strong>Eoljukbing</strong>. For any questions, bug reports,
+        or feature requests, please contact us at
+        <a href="mailto:sijinyudev@gmail.com">sijinyudev@gmail.com</a>.
+        We reply within 2 business days.
+      </p>
+      <p>
+        The app requires no sign-up and collects no personally identifiable information.
+        All data you create stays on your device and is never uploaded to a server.
+      </p>
+      <p>
+        Eoljukbing shows ads via Google AdMob and requests App Tracking Transparency
+        permission for personalized advertising. Declining the request does not limit
+        any app feature &mdash; you will simply see non-personalized ads instead.
+        You can change this anytime in
+        <em>Settings &gt; Privacy &amp; Security &gt; Tracking</em>.
+      </p>
+      <p>
+        <a href="https://sijinyu.github.io/eoljukbing-privacy/">Privacy Policy</a>
+      </p>
+    </div>
+
+    <footer>
+      © 얼죽빙 (Eoljukbing) · 문의: sijinyudev@gmail.com
+    </footer>
   </div>
-
-  <h2>자주 묻는 질문</h2>
-
-  <p><strong>Q. 소리가 안 나요.</strong><br>
-  기기의 볼륨을 확인해 주세요. 얼죽빙은 무음 모드에서도 소리가 나도록 되어 있지만,
-  볼륨이 0이면 들리지 않습니다.</p>
-
-  <p><strong>Q. 광고가 나오는데 개인정보를 수집하나요?</strong><br>
-  얼죽빙은 이름·이메일 등 개인정보를 수집하거나 저장하지 않습니다. 앱 내 광고는
-  Google AdMob을 통해 비개인화 방식으로 노출됩니다. 자세한 내용은
-  <a href="./">개인정보처리방침</a>을 참고해 주세요.</p>
-
-  <p><strong>Q. 만든 빙수는 어디에 저장되나요?</strong><br>
-  빙수 데이터는 기기 안에서만 처리되며 외부로 전송되지 않습니다.</p>
-
-  <footer>
-    © 2026 Sijin Yu · 얼죽빙<br>
-    <a href="./">개인정보처리방침</a>
-  </footer>
 </body>
 </html>
